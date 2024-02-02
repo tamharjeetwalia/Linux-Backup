@@ -1,0 +1,244 @@
+/*===KeyFox by AlfarexGuy2019===*/ 
+
+
+
+/*===COLORS===*/
+
+:root {
+  --accent-color: 45, 45, 45;
+  --tab-color: 240, 240, 244;
+  --tab-text-color: 255, 255, 255;
+  --secondary-accent-color: 127,127,127;
+  --second-tab-text-color: 127,127,127;
+  --third-accent-color: 235, 219, 178;
+  --light-color: 255, 255, 255;
+  --dark-color: 0, 0, 0;
+  --url-back: 249, 249, 251;
+  --caption-min-color: 215, 153, 33;
+  --caption-max-color: 69, 133, 136;
+  --caption-close-color: 177, 98, 134;
+  --firefoxcss-colored-sound-tab: #ff1becb9 !important; 
+}
+
+
+/* MIN MAX CLOSE Remove */
+#TabsToolbar > .titlebar-buttonbox-container {
+  visibility: collapse !important;
+}
+
+/*Basic Settings*/
+:root {
+  --navbarWidth     : 31vw; /* Set width of navbar. Use px for a fixed width 
+                                or vw for a percentage of your window. */
+  --animationSpeed  : 0.5s;
+}
+#TabsToolbar {
+  margin-left : var(--navbarWidth) !important;
+}
+#nav-bar {
+  margin-right: calc(100vw - var(--navbarWidth)) !important;
+}
+#urlbar-container {
+  min-width   : 0px !important;
+}
+:root[uidensity="compact"] #nav-bar {
+  margin-top  : -37px !important;
+  height      : 37px !important;
+}
+:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
+  margin-top  : -44px !important;
+  height      : 44px !important;
+}
+:root[uidensity="touch"] #nav-bar {
+  margin-top  : -49px !important;
+  height      : 49px !important;
+}
+
+
+/* Back Hide
+#back-button[disabled="true"] { display: none !important }
+
+/* Forward Hide 
+#forward-button[disabled="true"] { display: none !important } 
+
+/* Site information button */
+#identity-box {
+  display: none !important 
+
+
+
+}
+
+/* "Shield" icon */
+#tracking-protection-icon-container {
+  display: none !important 
+
+
+
+}
+
+
+/* Simplifying interface */
+#nav-bar {
+  background  : none !important;
+  box-shadow  : none !important;
+}
+#navigator-toolbox {
+  border      : none !important;
+}
+.titlebar-spacer {
+  display     : none !important;
+}
+#urlbar-background {
+  border      : none !important;
+}
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+  box-shadow  : none !important;
+  background  : none !important;
+}
+
+
+/* Element Hiding stuff */
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label {
+  fill        : transparent !important;
+  background  : transparent !important;
+  color       : transparent !important;
+}
+#urlbar:hover .urlbar-icon,
+#urlbar:active .urlbar-icon,
+#urlbar[focused] .urlbar-icon {
+  fill        : var(--toolbar-color) !important;
+}
+
+/*================== TABS BAR ==================*/
+#titlebar #TabsToolbar {
+  background: rgba(var(--dark-color), 1) !important;
+}
+#PersonalToolbar {
+  background: rgba(var(--dark-color), 1) !important;
+  color: rgba(var(--light-color), 1) !important;
+  padding-bottom: 6px !important;
+  padding-top: 1px !important;
+}
+toolbar#nav-bar {
+  background: rgba(var(--dark-color), 1) !important;
+  box-shadow: none !important;
+  padding-bottom: 4px !important;
+}
+
+/*================ DARK THEME ================*/
+:root:-moz-lwtheme-brighttext,
+.sidebar-panel[lwt-sidebar-brighttext],
+body[lwt-sidebar-brighttext] {
+  --main-bgcolor: var(--dark-color);
+  --transparent-bgcolor: var(--dark-color);
+}
+tab[selected="true"] .tab-content {
+  color: rgba(var(--secondary-accent-color), 1) !important;
+}
+tab[selected="true"] .tab-background {
+  background: rgba(var(--accent-color), 1) !important;
+}
+.tabbrowser-tab>.tab-stack>.tab-background:not([selected="true"]) {
+  transition: all 0.3s ease !important;
+}
+.tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected="true"]) {
+  background-color: rgba(var(--transparent-bgcolor), 0.7) !important;
+}
+.tab-line {
+  height: 0px !important;
+}
+.tabbrowser-tab {
+  margin-right: 5px !important;
+}
+.tabbrowser-tab:not([visuallyselected="true"]),
+.tabbrowser-tab:-moz-lwtheme {
+  color: rgba(var(--second-tab-text-color), 1) !important;
+}
+tab[selected="true"] .tab-content {
+  color: rgba(var(--tab-text-color), 1) !important;
+}
+tab[selected="true"] .tab-background {
+  background: rgba(var(--accent-color), 1) !important;
+}
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: 0 !important;
+  opacity: 0 !important;
+}
+.tab-close-button {
+  transition: all 0.3s ease !important;
+  border-radius: 4px !important;
+}
+.tabbrowser-tab .tab-label  {
+  color: var(--uc-inverted-colour) !important;
+}
+.tab-close-button {
+  fill: var(--uc-inverted-colour) !important 
+
+
+
+}
+
+
+/* *************************************** */
+
+/*  Clean and tight extensions menu */
+#unified-extensions-panel #unified-extensions-view {
+  width: 100% !important; /*  For firefox v115.x */
+}
+#unified-extensions-view {
+  --uei-icon-size: 22px; /*  Change icon size */
+  --firefoxcss-number-of-extensions-in-a-row: 3; /*  Increase to the number of icons you want in one row */
+}
+#unified-extensions-view .panel-header,
+#unified-extensions-view .panel-header + toolbarseparator,
+#unified-extensions-view .panel-subview-body + toolbarseparator,
+#unified-extensions-view #unified-extensions-manage-extensions,
+#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
+#unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents {
+  display:none !important;
+}
+#unified-extensions-view .panel-subview-body {
+  padding:4px !important;
+}
+#unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
+#unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
+  margin-inline-end: 0px !important;
+}
+#unified-extensions-view #overflowed-extensions-list,
+#unified-extensions-view #unified-extensions-area,
+#unified-extensions-view .unified-extensions-list {
+  display: grid !important;
+  grid-template-columns: repeat(var(--firefoxcss-number-of-extensions-in-a-row),auto);
+  justify-items:left !important;
+  align-items:left !important;
+}
+#unified-extensions-view .unified-extensions-list .unified-extensions-item,
+#unified-extensions-view .unified-extensions-list {
+  max-width: max-content;
+}
+#unified-extensions-view #unified-extensions-area {
+  padding-bottom: 3px !important;
+  border-bottom: 1px solid #aeaeae33 !important;
+}
+
+/*#unified-extensions-view .unified-extensions-list {
+  border-top: 1px solid #aeaeae33 !important;
+}*/
+
+#wrapper-edit-controls:is([place="palette"],
+[place="panel"]) > #edit-controls,
+#wrapper-zoom-controls:is([place="palette"],
+[place="panel"]) > #zoom-controls,
+:is(panelview,
+#widget-overflow-fixed-list) .toolbaritem-combined-buttons {
+  margin: 0px !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:is([soundplaying]) .tab-background:not([selected]) {
+  background-color: var(--firefoxcss-colored-sound-tab) !important;
+  transition: background-color 500ms ease !important;
+}

@@ -1,0 +1,4 @@
+2024-02-03 02:33:03.763 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/tamhar/.config/rofi/rofi.rasi","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-02-03 02:33:04.178 [info] Started local extension host with pid 86632.
+2024-02-03 02:33:04.243 [error] Extension 'ms-python.python' wants API proposal 'saveEditor' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-02-03 02:33:06.915 [info] [perf] Render performance baseline is 35ms

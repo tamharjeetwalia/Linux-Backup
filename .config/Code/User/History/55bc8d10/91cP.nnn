@@ -1,0 +1,4 @@
+function tai --wraps='./Desktop/tai/target/release/tai' --description 'Terminal Ascii image'
+   ./Desktop/tai/target/release/tai $argv
+        
+end

@@ -1,0 +1,129 @@
+{
+	"name": "vscode-fish",
+	"displayName": "Fish",
+	"description": "Fish syntax highlighting and formatting",
+	"publisher": "bmalehorn",
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/bmalehorn/vscode-fish"
+	},
+	"version": "1.0.38",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"icon": "fish.png",
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": "limited",
+			"description": "Syntax highlighting supported"
+		}
+	},
+	"categories": [
+		"Programming Languages",
+		"Formatters",
+		"Linters"
+	],
+	"keywords": [
+		"fish",
+		"shell",
+		"fish_indent",
+		"IDE",
+		"multi-root ready"
+	],
+	"main": "./out/extension",
+	"activationEvents": [
+		"onLanguage:fish"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "fish",
+				"aliases": [
+					"Fish"
+				],
+				"extensions": [
+					".fish"
+				],
+				"firstLine": "^#!\\s*/.*\\bfish\\b",
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "fish",
+				"scopeName": "source.fish",
+				"path": "./syntaxes/fish.tmLanguage.json"
+			},
+			{
+				"scopeName": "markdown.fish.codeblock",
+				"path": "./syntaxes/codeblock.json",
+				"injectTo": [
+					"text.html.markdown"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.fish": "fish"
+				}
+			}
+		],
+		"configuration": {
+			"title": "Fish",
+			"properties": {
+				"fish.path.fish": {
+					"type": "string",
+					"scope": "machine-overridable",
+					"default": "fish",
+					"description": "Path to the `fish` command"
+				},
+				"fish.path.fish_indent": {
+					"type": "string",
+					"scope": "machine-overridable",
+					"default": "fish_indent",
+					"description": "Path to the `fish_indent` command"
+				}
+			}
+		},
+		"snippets": [
+			{
+				"language": "fish",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"test": "yarn run compile && node ./out/test/runTests"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.10.25",
+		"@types/vscode": "^1.47.0",
+		"@vscode/test-electron": "^2.1.3",
+		"glob": "^7.2.0",
+		"husky": "^3.0.4",
+		"mocha": "^9.2.2",
+		"prettier": "^2.0.0",
+		"pretty-quick": "^1.11.1",
+		"tslint": "^5.8.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "3.9.6"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"__metadata": {
+		"id": "efa79b03-91c5-4c6a-9846-0a7b6f7af05e",
+		"publisherId": "1215635c-400c-4cc8-96d3-f2d5da4774a4",
+		"publisherDisplayName": "Brian Malehorn",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1706386565639,
+		"pinned": true,
+		"preRelease": false
+	}
+}

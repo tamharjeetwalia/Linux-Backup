@@ -1,0 +1,7 @@
+2024/01/28-02:10:49.341 72c6 Reusing MANIFEST /home/tamhar/.config/Code/IndexedDB/https_www.barbarianmeetscoding.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/28-02:10:49.341 72c6 Recovering log #3
+2024/01/28-02:10:49.341 72c6 Reusing old log /home/tamhar/.config/Code/IndexedDB/https_www.barbarianmeetscoding.com_0.indexeddb.leveldb/000003.log 
+2024/01/28-02:11:25.192 72c8 Level-0 table #5: started
+2024/01/28-02:11:25.198 72c8 Level-0 table #5: 10270 bytes OK
+2024/01/28-02:11:25.208 72c8 Delete type=0 #3
+2024/01/28-02:11:25.208 72c8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

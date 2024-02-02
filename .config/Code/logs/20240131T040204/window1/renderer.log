@@ -1,0 +1,4 @@
+2024-01-31 04:02:04.789 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'registerIssueDataProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-01-31 04:02:04.850 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/tamhar/.config/ranger/rifle.conf","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-01-31 04:02:05.298 [info] Started local extension host with pid 67714.
+2024-01-31 04:02:07.994 [info] [perf] Render performance baseline is 36ms
